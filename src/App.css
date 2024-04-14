@@ -1,38 +1,74 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.circle {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  background-color: black;
+  height: 8vh;
+  width: 4vw;
+  border-radius: 50vw;
+  cursor: pointer;
+}
+.container h1 {
+  margin-top: 80px;
+}
+.Buttons {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.circle img {
+  filter: invert(1);
+  height: 50px;
+}
+.circle:hover {
+  background-color: rgb(66, 63, 15);
 }
 
-.App-link {
-  color: #61dafb;
+.Custom-Design {
+  width: 70vw;
+  display: grid;
+  grid-template-columns: 20vw 20vw 20vw;
+  gap: 10px;
+}
+.NewsItem {
+  border: 2px solid black;
+  width: 20vw;
+  height: 51vh;
+}
+.NewsItem .card {
+  height: 50vh;
+}
+.NewsItem .card img {
+  width: 100%;
+  height: 20vh;
+  object-fit: cover;
+}
+.card .card-body {
+  height: 20vh;
+}
+.card-text {
+  overflow: hidden;
+  height: 10vh;
+}
+.card .card-title {
+  overflow: hidden;
+  height: 10vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 600px) {
+  .Custom-Design {
+    grid-template-columns: 20vw;
   }
-  to {
-    transform: rotate(360deg);
+  .NewsItem {
+    width: 90vw;
+    height: 55vh;
+  }
+  .NewsItem .card {
+    height: 54vh;
+  }
+
+  .circle {
+    height: 7vh;
+    width: 13vw;
   }
 }
